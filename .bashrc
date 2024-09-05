@@ -10,7 +10,7 @@
 echo "Bonjour Frank !"
 screenfetch
 alias lsa="ls -la"
-alias ll="ls -lla"
+alias ll="ll -la"
 alias c="clear"
 alias grepc="grep --color=always"
 
@@ -31,8 +31,9 @@ function mygrep()
 	grep $1 $2  -i --color=always
 }
 
+PS0='[MrFrank@\h \W]\$ '
 
-	 PS0='[MrFrank@\h \W]\$ '
+export PATH=$PATH:/home/math/bin
 
 #Fin de mes modifications
 
