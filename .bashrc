@@ -31,6 +31,13 @@ function mygrep()
 	grep $1 $2  -i --color=always
 }
 
+function git1()
+{
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_personal
+}
+
+
 PS0='[MrFrank@\h \W]\$ '
 
 export PATH=$PATH:/home/math/bin
