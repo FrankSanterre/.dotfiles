@@ -34,7 +34,7 @@ function mygrep()
 function git1()
 {
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_personal
+ssh-add ~/ProgDev/'touch key.txt'
 }
 
 
