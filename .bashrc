@@ -6,17 +6,85 @@
 
 #Debut de mes modifications
 
-
+eval "$(ssh-agent -s)"
+ssh-add ~/ProgDev/'touch key.txt'
 echo "Bonjour Frank !"
 screenfetch
+
+alias chr="google-chrome-stable"
+alias v="vim"
 alias lsa="ls -la"
-alias ll="ll -la"
+alias ll="ls -lla"
 alias c="clear"
 alias grepc="grep --color=always"
 
+
+spot() {
+    /snap/bin/spotify
+}
+
+code(){
+	/snap/bin/code
+}
+
+
+
+# Function to open Rick Astley's "Never gonna give you up"
+execute_666() {
+
+    # URL of the Rickroll video on YouTube
+    local url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
+    # Open the URL in the default web browser
+    xdg-open "$url" 2>/dev/null
+
+    # Optionally, print a message
+    echo "You've been Rickrolled! Enjoy the video."
+}
+
+gpt() {
+    if command -v xdg-open > /dev/null; then
+        xdg-open "https://chat.openai.com"
+    elif command -v open > /dev/null; then
+        open "https://chat.openai.com"
+    else
+        echo "Unable to determine how to open the URL."
+    fi
+}
+
+
+
+yt() {
+    if command -v xdg-open > /dev/null; then
+        xdg-open "https://www.youtube.com"
+    elif command -v open > /dev/null; then
+        open "https://www.youtube.com"
+    else
+        echo "Unable to determine how to open the URL."
+    fi
+}
+
+
+
+
+
+miaou() {
+    cat << "EOF"
+
+
+    /\_____/\
+   /  o   o  \
+  ( ==  ^  == )
+   )         (
+  (           )
+ ( (  )   (  ) )
+(__(__)___(__)__)
+EOF
+}
+
 function Credep()
 {
-	mdkir $1
+	mkdir $1
 	cd $1
 }
 
@@ -31,16 +99,8 @@ function mygrep()
 	grep $1 $2  -i --color=always
 }
 
-function git1()
-{
-eval "$(ssh-agent -s)"
-ssh-add ~/ProgDev/'touch key.txt'
-}
 
-
-PS0='[MrFrank@\h \W]\$ '
-
-export PATH=$PATH:/home/math/bin
+	 PS0='[MrFrank@\h \W]\$ '
 
 #Fin de mes modifications
 
@@ -83,7 +143,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-56color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
